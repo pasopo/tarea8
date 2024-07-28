@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root{
+    --veroscuro:  #023f2f;
+    --verclaro:     #04724d;
+    --degradado:linear-gradient(90deg, var(--veroscuro), var(--verclaro));
+}
+*{
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--verclaro);
+    color: white;
+}
+
+html{
+    font-size: 50%;
+    overflow: visible;
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f5d8;
+    box-shadow: 0.5rem 1rem rgba(0,0,0, .1);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 3rem;
+    color: var(--veroscuro);
+}
+
+header .logo span{
+    color: var(--verclaro);
+}
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--verclaro);
+}
+header .navbar a:hover{
+    color: var(--veroscuro);
+}
+header input{
+    display: none;
+}
+header label{
+    font-size: 3rem;
+    color: var(--verclaro);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+   header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem 2rem;
+    border-top: .1rem solid rgba(0,0,0, .2);
+    box-shadow: 0.5rem 1rem rgba(0,0,0, .1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+   } 
+
+   header .navbar a{
+    display: block;
+    margin: 2rem 0;
+    font-size: 2rem;
+
+   }
+   header input:checked ~ .navbar{
+    transform: scaleY(1);
+    opacity: 1;    
+   }
+   header input:checked ~ label::before{
+        content: '\f00d';
+   }
+}
+@media(max-width: 450px){
+    html{
+        font-size: 49%;
+
+    }
+
+}
+.container {
+    text-align: center;
+    font-size: 220%;
+    margin-top: 2px;
+    color: blue;
+}
+.resultados {
+        text-align: center;
+        font-size: 200%;
+        margin-top: 20px;
+    }
+marquee{
+    text-align: top;
+    font-size: 400%;
+    color: rgb(254, 3, 3);
+}
+
+h1{
+    text-align: center;
+    font-size: 300%;
+    color: blue;
+}
+h2{
+    text-align: center;
+    font-size: 35%;
+    color: blue;
+}
+h3{
+    text-align: center;
+    font-size: 150%;
+    color: blue; 
+}
+h4{
+    text-align: center;
+    font-size: 40%;
+    color: blue; 
+}
+h5{
+    text-align: center;
+    font-size: 150%;
+    color: blue; 
+}
+h6{
+    text-align: center;
+    font-size: 70%;
+    color: blue; 
+}
+body{
+    background-color:#aed29e ;
+    overflow-x: hidden;
+}
+table{
+    text-align: left;
+    font-size: 160%;
+    color: blue; 
+}
